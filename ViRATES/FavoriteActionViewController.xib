@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoriteActionViewController">
+            <connections>
+                <outlet property="tableView" destination="dZc-KB-M6L" id="A6h-UM-TZm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dZc-KB-M6L">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="kbV-MQ-tlc"/>
+                        <outlet property="delegate" destination="-1" id="W7R-CG-0tB"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="dZc-KB-M6L" secondAttribute="trailing" id="GTh-jm-kj1"/>
+                <constraint firstAttribute="bottom" secondItem="dZc-KB-M6L" secondAttribute="bottom" id="MsD-NO-FLM"/>
+                <constraint firstItem="dZc-KB-M6L" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ZsE-K1-gSE"/>
+                <constraint firstItem="dZc-KB-M6L" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zqw-8P-hRC"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

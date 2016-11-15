@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActionViewController">
+            <connections>
+                <outlet property="contentView" destination="gXk-Nv-heh" id="X7S-bk-bPB"/>
+                <outlet property="contentViewConstraintTop" destination="Zyd-yO-L7t" id="Epc-q8-SId"/>
+                <outlet property="menuScrollView" destination="VAk-hl-J4j" id="G1Q-8T-mhP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="132"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXk-Nv-heh">
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAk-hl-J4j" customClass="ASHorizontalScrollView">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="86" id="vUe-DL-Whs"/>
+                            </constraints>
+                        </scrollView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djT-db-sWO">
+                            <color key="backgroundColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="cEl-s0-sYO"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EX0-ml-gV9">
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="キャンセル">
+                                <color key="titleColor" red="0.23137254900000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="pressedCancel:" destination="-1" eventType="touchUpInside" id="SaI-Yb-43a"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="132" id="92A-4h-yq1"/>
+                        <constraint firstAttribute="trailing" secondItem="VAk-hl-J4j" secondAttribute="trailing" id="Dpl-Zo-3zf"/>
+                        <constraint firstItem="VAk-hl-J4j" firstAttribute="leading" secondItem="gXk-Nv-heh" secondAttribute="leading" id="OXT-q8-UWU"/>
+                        <constraint firstItem="djT-db-sWO" firstAttribute="top" secondItem="VAk-hl-J4j" secondAttribute="bottom" id="V5n-yU-RWn"/>
+                        <constraint firstAttribute="trailing" secondItem="djT-db-sWO" secondAttribute="trailing" id="VBM-0d-7Co"/>
+                        <constraint firstItem="djT-db-sWO" firstAttribute="leading" secondItem="gXk-Nv-heh" secondAttribute="leading" id="Yud-hh-jrt"/>
+                        <constraint firstItem="EX0-ml-gV9" firstAttribute="top" secondItem="djT-db-sWO" secondAttribute="bottom" id="cwX-mU-DIm"/>
+                        <constraint firstItem="EX0-ml-gV9" firstAttribute="leading" secondItem="gXk-Nv-heh" secondAttribute="leading" id="gl8-F9-Umo"/>
+                        <constraint firstItem="VAk-hl-J4j" firstAttribute="top" secondItem="gXk-Nv-heh" secondAttribute="top" id="isH-Gu-fHe"/>
+                        <constraint firstAttribute="trailing" secondItem="EX0-ml-gV9" secondAttribute="trailing" id="ruM-ZQ-TZe"/>
+                        <constraint firstAttribute="bottom" secondItem="EX0-ml-gV9" secondAttribute="bottom" id="z27-gt-gh7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gXk-Nv-heh" secondAttribute="trailing" id="2ZG-SM-sne"/>
+                <constraint firstItem="gXk-Nv-heh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="87A-Do-udH"/>
+                <constraint firstItem="gXk-Nv-heh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Zyd-yO-L7t"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

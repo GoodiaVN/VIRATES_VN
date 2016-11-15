@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArticleViewController">
+            <connections>
+                <outlet property="backButton" destination="XZC-LA-twJ" id="e6e-24-0MZ"/>
+                <outlet property="containerView" destination="Qs7-ez-vL4" id="tJb-63-fr6"/>
+                <outlet property="favoriteButton" destination="3ub-Ne-lht" id="bVh-Zq-YJ1"/>
+                <outlet property="forwardButton" destination="5ET-D8-X57" id="GoY-8Z-Hth"/>
+                <outlet property="toolBar" destination="tEi-sG-3C7" id="ChN-AL-cXk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qs7-ez-vL4">
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vUW-Up-NAQ">
+                            <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="j0A-Jf-3XM"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="vUW-Up-NAQ" firstAttribute="leading" secondItem="Qs7-ez-vL4" secondAttribute="leading" id="KTo-GP-uh9"/>
+                        <constraint firstAttribute="trailing" secondItem="vUW-Up-NAQ" secondAttribute="trailing" id="O0z-jg-qf9"/>
+                        <constraint firstItem="vUW-Up-NAQ" firstAttribute="top" secondItem="Qs7-ez-vL4" secondAttribute="top" id="raA-GW-JQu"/>
+                    </constraints>
+                </view>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ub-Ne-lht">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="lHk-5n-xN3"/>
+                        <constraint firstAttribute="height" constant="30" id="mNy-qQ-e6h"/>
+                    </constraints>
+                    <state key="normal" image="icon_favorite_off"/>
+                    <connections>
+                        <action selector="pressedFavoriteButton:" destination="-1" eventType="touchUpInside" id="ejT-3h-VRp"/>
+                    </connections>
+                </button>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEi-sG-3C7">
+                    <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="eba-le-Bt8"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem style="plain" id="bG2-IF-1Wk">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XZC-LA-twJ">
+                                <rect key="frame" x="16" y="4" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="3" minY="5" maxX="3" maxY="5"/>
+                                <state key="normal" image="Back-btn"/>
+                                <connections>
+                                    <action selector="pressedBackButton:" destination="-1" eventType="touchUpInside" id="TpP-Cj-On9"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="mbU-ng-eOh"/>
+                        <barButtonItem style="plain" id="IDh-7t-MuH">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5ET-D8-X57">
+                                <rect key="frame" x="82" y="4" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="3" minY="5" maxX="3" maxY="5"/>
+                                <state key="normal" image="Forward-btn"/>
+                                <connections>
+                                    <action selector="pressedForwardButton:" destination="-1" eventType="touchUpInside" id="TVR-Nt-RQa"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="TVO-a6-8kO"/>
+                        <barButtonItem style="plain" id="402-tO-jF8">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="y1V-F9-1YS">
+                                <rect key="frame" x="187" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="5" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="1"/>
+                                <state key="normal" image="icon_minifacebook"/>
+                                <connections>
+                                    <action selector="pressedFacebookButton:" destination="-1" eventType="touchUpInside" id="Ghg-ze-RcU"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem width="8" style="plain" systemItem="fixedSpace" id="WD0-Rd-rbj"/>
+                        <barButtonItem style="plain" id="uRy-27-pPb">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="U2T-sH-dfq">
+                                <rect key="frame" x="235" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="2" minY="0.0" maxX="2" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="4"/>
+                                <state key="normal" image="icon_minitwitter"/>
+                                <connections>
+                                    <action selector="pressedTwitterButton:" destination="-1" eventType="touchUpInside" id="4of-Fq-xPP"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem width="8" style="plain" systemItem="fixedSpace" id="xJL-ED-Ybh"/>
+                        <barButtonItem style="plain" id="nL8-fu-FAU">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7Wl-1z-CZg">
+                                <rect key="frame" x="283" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="1" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="1"/>
+                                <state key="normal" image="icon_miniline"/>
+                                <connections>
+                                    <action selector="pressedLineButton:" destination="-1" eventType="touchUpInside" id="spe-bd-wjx"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem width="4" style="plain" systemItem="fixedSpace" id="YUD-dn-bQl"/>
+                        <barButtonItem style="plain" id="5VW-J6-e5r">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0cB-tY-Nm3">
+                                <rect key="frame" x="327" y="7" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="7" minY="0.0" maxX="4" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="1"/>
+                                <state key="normal" image="icon_send"/>
+                                <connections>
+                                    <action selector="pressedActionButton:" destination="-1" eventType="touchUpInside" id="fEl-TG-f3P"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </items>
+                    <color key="barTintColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Qs7-ez-vL4" secondAttribute="trailing" id="2eE-0S-mTC"/>
+                <constraint firstAttribute="trailing" secondItem="tEi-sG-3C7" secondAttribute="trailing" id="GX4-tM-PYQ"/>
+                <constraint firstItem="tEi-sG-3C7" firstAttribute="top" secondItem="Qs7-ez-vL4" secondAttribute="bottom" id="HAv-Pc-qLu"/>
+                <constraint firstAttribute="trailing" secondItem="3ub-Ne-lht" secondAttribute="trailing" constant="14" id="J6I-5E-L10"/>
+                <constraint firstItem="Qs7-ez-vL4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JoI-CJ-R1M"/>
+                <constraint firstItem="tEi-sG-3C7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iq9-7x-bIK"/>
+                <constraint firstItem="Qs7-ez-vL4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mIi-Ge-Ex3"/>
+                <constraint firstItem="3ub-Ne-lht" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="24" id="mJH-OI-Cb8"/>
+                <constraint firstAttribute="bottom" secondItem="tEi-sG-3C7" secondAttribute="bottom" id="zlb-Vk-ueB"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <point key="canvasLocation" x="140.5" y="299.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Back-btn" width="50" height="50"/>
+        <image name="Forward-btn" width="50" height="50"/>
+        <image name="icon_favorite_off" width="53" height="51"/>
+        <image name="icon_minifacebook" width="21" height="42"/>
+        <image name="icon_miniline" width="46" height="43"/>
+        <image name="icon_minitwitter" width="42" height="34"/>
+        <image name="icon_send" width="32" height="44"/>
+    </resources>
+</document>

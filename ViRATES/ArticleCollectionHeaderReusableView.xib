@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ArticleCollectionHeader" id="U6b-Vx-4bR" customClass="ArticleCollectionHeaderReusableView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="210"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J2o-FB-6c0"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Hot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9CG-MS-tWa">
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.47666229470802918" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="Hmo-oP-26I"/>
+                        <constraint firstAttribute="height" constant="26" id="ODM-m4-q8C"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9d-Qf-URL">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="123-yL-3lU"/>
+                        <constraint firstAttribute="width" constant="30" id="LI8-8d-FGy"/>
+                    </constraints>
+                    <state key="normal" image="icon_favorite_off"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="9999950" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoS-hH-vaF" customClass="FXLabel">
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="LuI-OF-A0O"/>
+                        <constraint firstAttribute="height" constant="15" id="Y8R-EB-t0G"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_coment" translatesAutoresizingMaskIntoConstraints="NO" id="9W6-EQ-ybt">
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="djX-aF-KjV"/>
+                        <constraint firstAttribute="height" constant="22" id="ejb-vO-NSo"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ジャスティン・ビーバーが" textAlignment="right" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KSb-8F-dtA" customClass="FXLabel">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Z2n-vV-08H"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="芸能エンタメ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77W-T8-aHm">
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29994012315912411" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="78" id="44Z-Lf-NOe"/>
+                        <constraint firstAttribute="height" constant="20" id="pC9-xs-3bO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.20392156862745098" green="0.20392156862745098" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="J2o-FB-6c0" secondAttribute="trailing" id="58b-tg-UGH"/>
+                <constraint firstItem="9W6-EQ-ybt" firstAttribute="leading" secondItem="77W-T8-aHm" secondAttribute="trailing" constant="4" id="6Ms-Qp-GJA"/>
+                <constraint firstItem="eoS-hH-vaF" firstAttribute="trailing" secondItem="J9d-Qf-URL" secondAttribute="trailing" id="7tc-p9-jqf"/>
+                <constraint firstItem="9CG-MS-tWa" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="884-gN-Ju5"/>
+                <constraint firstAttribute="trailing" secondItem="J9d-Qf-URL" secondAttribute="trailing" constant="8" id="8hp-XE-Vxd"/>
+                <constraint firstItem="eoS-hH-vaF" firstAttribute="leading" secondItem="9W6-EQ-ybt" secondAttribute="trailing" constant="4" id="DkZ-sx-wnK"/>
+                <constraint firstItem="KSb-8F-dtA" firstAttribute="trailing" secondItem="J9d-Qf-URL" secondAttribute="trailing" id="IAK-1E-Ppq"/>
+                <constraint firstItem="9W6-EQ-ybt" firstAttribute="centerY" secondItem="eoS-hH-vaF" secondAttribute="centerY" constant="1" id="K1q-sP-8Cd"/>
+                <constraint firstItem="9CG-MS-tWa" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="SZn-Xt-em4"/>
+                <constraint firstItem="J2o-FB-6c0" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="TmI-C9-cdq"/>
+                <constraint firstItem="77W-T8-aHm" firstAttribute="centerY" secondItem="eoS-hH-vaF" secondAttribute="centerY" id="Yul-OV-uYr"/>
+                <constraint firstAttribute="bottom" secondItem="J2o-FB-6c0" secondAttribute="bottom" id="blv-Bx-KXs"/>
+                <constraint firstItem="eoS-hH-vaF" firstAttribute="top" secondItem="KSb-8F-dtA" secondAttribute="bottom" constant="4" id="ghR-hn-QDp"/>
+                <constraint firstItem="J2o-FB-6c0" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="m0C-NL-kVr"/>
+                <constraint firstAttribute="bottom" secondItem="eoS-hH-vaF" secondAttribute="bottom" constant="10" id="r6i-VU-6Rv"/>
+                <constraint firstItem="KSb-8F-dtA" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="8" id="wHQ-KI-Fdf"/>
+                <constraint firstItem="J9d-Qf-URL" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="14" id="xwx-YT-qF5"/>
+            </constraints>
+            <connections>
+                <outlet property="articleImageView" destination="J2o-FB-6c0" id="Jx1-Eu-LEr"/>
+                <outlet property="categoryLabel" destination="77W-T8-aHm" id="YnQ-cO-80c"/>
+                <outlet property="favoriteButton" destination="J9d-Qf-URL" id="0I0-dd-tWC"/>
+                <outlet property="titleLabel" destination="KSb-8F-dtA" id="uTi-LI-59b"/>
+                <outlet property="totalCommentLabel" destination="eoS-hH-vaF" id="Exp-lk-rwO"/>
+            </connections>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="icon_coment" width="56" height="44"/>
+        <image name="icon_favorite_off" width="53" height="51"/>
+    </resources>
+</document>

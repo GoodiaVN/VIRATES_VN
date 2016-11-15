@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ArticleTableViewHeader">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l9c-5h-0mV"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="617-3n-APT" customClass="FXLabel">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="scr-VD-saU"/>
+                    </constraints>
+                    <string key="text">どこにもない
+涙する本音のラブーストーリー</string>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <size key="shadowOffset" width="0.0" height="1"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="617-3n-APT" secondAttribute="bottom" constant="8" id="4Zx-EQ-bac"/>
+                <constraint firstAttribute="trailing" secondItem="l9c-5h-0mV" secondAttribute="trailing" id="SHd-RI-AhG"/>
+                <constraint firstItem="l9c-5h-0mV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="aZv-Dv-mDO"/>
+                <constraint firstItem="617-3n-APT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="ad4-p8-c7Q"/>
+                <constraint firstAttribute="trailing" secondItem="617-3n-APT" secondAttribute="trailing" constant="12" id="bvx-am-8rJ"/>
+                <constraint firstAttribute="bottom" secondItem="l9c-5h-0mV" secondAttribute="bottom" id="dtk-Ig-Fcr"/>
+                <constraint firstItem="l9c-5h-0mV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="int-OP-jK1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="headerImageView" destination="l9c-5h-0mV" id="o69-El-a9x"/>
+                <outlet property="titleLabel" destination="617-3n-APT" id="dpT-gh-DJH"/>
+            </connections>
+        </view>
+    </objects>
+</document>
