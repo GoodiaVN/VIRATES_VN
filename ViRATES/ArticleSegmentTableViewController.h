@@ -14,9 +14,12 @@
 @protocol ArticleSegmentTableViewDelegate <NSObject>
 @optional
 - (void)articleSegmentTable:(UITableView *)tableView didSelectedArticle:(Article *)article withAllArticleArray:(NSArray *)articleArray;
+- (void)ArticleSegmentScrollUpNavigationBar:(CGFloat)newY;
 @end
 
 @interface ArticleSegmentTableViewController : UIViewController
+
+@property(nonatomic, assign) UINavigationBar* naviBar;
 
 @property (nonatomic, assign) id<ArticleSegmentTableViewDelegate> articleDelegate;
 @property (nonatomic, assign) ArticleCategory *articleCategory;

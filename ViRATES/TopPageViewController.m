@@ -253,6 +253,9 @@ typedef enum ScrollDirection {
         aSegTableVc.articleCategory = aCategory;
         aSegTableVc.title = aCategory.name;
         [self.scrollVcArray addObject:aSegTableVc];
+        
+        aSegTableVc.naviBar = self.navigationController.navigationBar;
+        
     } else {
         ArticleCollectionViewController *aVc = [self createArticleCollectionViewControllerWithArticleCategory:aCategory hideHeader:NO];
         [self.scrollVcArray addObject:aVc];
@@ -330,6 +333,12 @@ typedef enum ScrollDirection {
 
 
 #pragma mark - Article Delegate methods
+
+-(void)ArticleSegmentScrollUpNavigationBar:(CGFloat)newY
+{
+    _pagemenu.view.frame = CGRectMake(0, newY, _pagemenu.view.frame.size.width, [[UIScreen mainScreen] bounds].size.height - newY);
+}
+
 -(void)scrollUpNavigationBar:(CGFloat)newY
 {
     _pagemenu.view.frame = CGRectMake(0, newY, _pagemenu.view.frame.size.width, [[UIScreen mainScreen] bounds].size.height - newY);

@@ -33,7 +33,6 @@
 @property (strong, nonatomic) NSString *firstURL;
 @property (strong, nonatomic) NSString *secondURL;
 
-
 @end
 
 @implementation ArticleSegmentTableViewController
@@ -427,4 +426,47 @@
     [self.view.window.rootViewController presentViewController:alert animated:YES completion:nil];
 }
 
+#pragma mark - SCROLLVIEW DELEGATE
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGRect frame = _naviBar.frame;
+    CGFloat scrollOffset = scrollView.contentOffset.y;
+    
+    if(scrollOffset > 0){
+        frame.origin.y = _naviBar.frame.origin.y;
+        frame.size.height = MAX(0, 44 - scrollOffset);
+        
+        CGFloat alpha = (44 - scrollOffset)/44;
+        [self updateBarButtonItems:alpha];
+        
+        if (self.articleDelegate && [self.articleDelegate respondsToSelector:@selector(scrollUpNavigationBar:)])
+        {
+            [self.articleDelegate ArticleSegmentScrollUpNavigationBar:MAX(_naviBar.frame.origin.y - 22 - scrollOffset, _naviBar.frame.origin.y - 66)];
+        }
+    }
+    else{
+        frame.origin.y = _naviBar.frame.origin.y;
+        frame.size.height = 44;
+        
+        [self updateBarButtonItems:1];
+        
+        if (self.articleDelegate && [self.articleDelegate respondsToSelector:@selector(scrollUpNavigationBar:)])
+        {
+            [self.articleDelegate ArticleSegmentScrollUpNavigationBar:_naviBar.frame.origin.y - 22];
+        }
+    }
+    [_naviBar setFrame:frame];
+}
+
+- (void)updateBarButtonItems:(CGFloat)alpha
+{
+    [_naviBar.topItem.leftBarButtonItems enumerateObjectsUsingBlock:^(UIBarButtonItem* item, NSUInteger i, BOOL *stop) {
+        item.customView.alpha = alpha;
+    }];
+    [_naviBar.topItem.rightBarButtonItems enumerateObjectsUsingBlock:^(UIBarButtonItem* item, NSUInteger i, BOOL *stop) {
+        item.customView.alpha = alpha;
+    }];
+    _naviBar.topItem.titleView.alpha = alpha;
+    _naviBar.tintColor = [_naviBar.tintColor colorWithAlphaComponent:alpha];
+}
 @end
