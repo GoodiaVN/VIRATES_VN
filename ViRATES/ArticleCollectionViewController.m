@@ -544,10 +544,6 @@
         }
     }
     [_naviBar setFrame:frame];
-    
-    
-    
-    self.view.backgroundColor = [UIColor redColor];
 }
 
 - (void)updateBarButtonItems:(CGFloat)alpha
