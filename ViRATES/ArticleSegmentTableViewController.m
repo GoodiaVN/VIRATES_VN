@@ -439,9 +439,23 @@
         CGFloat alpha = (44 - scrollOffset)/44;
         [self updateBarButtonItems:alpha];
         
-        if (self.articleDelegate && [self.articleDelegate respondsToSelector:@selector(scrollUpNavigationBar:)])
+        if (scrollOffset >= 44)
         {
-            [self.articleDelegate ArticleSegmentScrollUpNavigationBar:MAX(_naviBar.frame.origin.y - 22 - scrollOffset, _naviBar.frame.origin.y - 66)];
+            [_naviBar setHidden:YES];
+            
+            if (self.articleDelegate && [self.articleDelegate respondsToSelector:@selector(ArticleSegmentScrollUpNavigationBar:)])
+            {
+                [self.articleDelegate ArticleSegmentScrollUpNavigationBar:MAX(_naviBar.frame.origin.y - scrollOffset + 22, _naviBar.frame.origin.y)];
+            }
+        }
+        else
+        {
+            [_naviBar setHidden:NO];
+            
+            if (self.articleDelegate && [self.articleDelegate respondsToSelector:@selector(ArticleSegmentScrollUpNavigationBar:)])
+            {
+                [self.articleDelegate ArticleSegmentScrollUpNavigationBar:MAX(_naviBar.frame.origin.y - 22 - scrollOffset, _naviBar.frame.origin.y - 66)];
+            }
         }
     }
     else{
@@ -450,7 +464,8 @@
         
         [self updateBarButtonItems:1];
         
-        if (self.articleDelegate && [self.articleDelegate respondsToSelector:@selector(scrollUpNavigationBar:)])
+        [_naviBar setHidden:NO];
+        if (self.articleDelegate && [self.articleDelegate respondsToSelector:@selector(ArticleSegmentScrollUpNavigationBar:)])
         {
             [self.articleDelegate ArticleSegmentScrollUpNavigationBar:_naviBar.frame.origin.y - 22];
         }
