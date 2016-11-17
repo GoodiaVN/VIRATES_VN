@@ -63,7 +63,7 @@
     self.tableView.tableHeaderView = self.segmentedControl;
     [self.tableView registerNib:[UINib nibWithNibName:@"ArticleSegmentTableViewCell" bundle:nil] forCellReuseIdentifier:@"ArticleSegmentTableViewCell"];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    self.tableView.scrollsToTop = YES;
+    self.tableView.scrollsToTop = NO;
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(manualReload
                                                          ) forControlEvents:UIControlEventValueChanged];
@@ -75,6 +75,17 @@
     self.articleWeeklyList = [NSMutableArray new];
     self.articleMonthlyList = [NSMutableArray new];
 
+}
+
+- (void)enableScrollToTop
+{
+    self.tableView.scrollsToTop = YES;
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    self.tableView.scrollsToTop = NO;
 }
 
 - (void)reloadTableView {

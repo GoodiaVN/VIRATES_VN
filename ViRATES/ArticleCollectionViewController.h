@@ -31,4 +31,5 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil hideHeader:(BOOL)hideHeader;
 - (void)reloadArticle;
 - (void)reloadCollectionView;
+- (void)enableScrollToTop;
 @end

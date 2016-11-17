@@ -319,10 +319,20 @@ typedef enum ScrollDirection {
     if([controller isKindOfClass:[ArticleCollectionViewController class]] ) {
         ArticleCollectionViewController *aController = (ArticleCollectionViewController *)controller;
         aController.isBackgroundLoad = isBackgroundload;
+        
+        if (!isBackgroundload) {
+            [aController enableScrollToTop];
+        }
+        
         [aController reloadArticle];
     } else if([controller isKindOfClass:[ArticleSegmentTableViewController class]] ) {
         ArticleSegmentTableViewController *aController = (ArticleSegmentTableViewController*)controller;
         aController.isBackgroundLoad = isBackgroundload;
+        
+        if (!isBackgroundload) {
+            [aController enableScrollToTop];
+        }
+        
         [aController reloadArticle];
     } else if([controller isKindOfClass:[ArticleTableViewController class]] ) {
         ArticleTableViewController *aController = (ArticleTableViewController*)controller;

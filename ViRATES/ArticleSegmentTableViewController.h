@@ -27,5 +27,6 @@
 
 - (void)reloadArticle;
 - (void)reloadTableView;
+- (void)enableScrollToTop;
 
 @end

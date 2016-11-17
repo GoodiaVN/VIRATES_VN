@@ -55,7 +55,7 @@
     self.isLoading = NO;
     self.isForceLoad = NO;
     self.isBackgroundLoad = NO;
-    self.collectionView.scrollsToTop = YES;
+    self.collectionView.scrollsToTop = NO;
     self.collectionView.alwaysBounceVertical = YES;
 
     CGRect screenSize = [[UIScreen mainScreen] bounds];
@@ -83,6 +83,17 @@
     if(_adg) {
         [_adg resumeRefresh];
     }
+}
+
+- (void)enableScrollToTop
+{
+    self.collectionView.scrollsToTop = YES;
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    self.collectionView.scrollsToTop = NO;
+    [super viewDidDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
