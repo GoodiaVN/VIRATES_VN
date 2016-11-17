@@ -16,6 +16,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <ADG/ADGManagerViewController.h>
+#import "GlobalVars.h"
 
 @interface ArticleCollectionViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout,ADGManagerViewControllerDelegate>
 
@@ -530,6 +531,7 @@
         if (scrollOffset >= 44)
         {
             [_naviBar setHidden:YES];
+            [GlobalVars sharedInstance].isShowNaviBar = NO;
             
             if (self.articleDelegate && [self.articleDelegate respondsToSelector:@selector(scrollUpNavigationBar:)])
             {
@@ -539,6 +541,7 @@
         else
         {
             [_naviBar setHidden:NO];
+            [GlobalVars sharedInstance].isShowNaviBar = YES;
             
             if (self.articleDelegate && [self.articleDelegate respondsToSelector:@selector(scrollUpNavigationBar:)])
             {
@@ -553,6 +556,8 @@
         [self updateBarButtonItems:1];
         
         [_naviBar setHidden:NO];
+        [GlobalVars sharedInstance].isShowNaviBar = YES;
+        
         if (self.articleDelegate && [self.articleDelegate respondsToSelector:@selector(scrollUpNavigationBar:)])
         {
             [self.articleDelegate scrollUpNavigationBar:_naviBar.frame.origin.y - 22];

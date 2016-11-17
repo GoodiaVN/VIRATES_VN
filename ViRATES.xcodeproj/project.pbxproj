@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		21FEBF1DEA8BEB7459A1BE5D /* libPods-ViRATESUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C5E35A4D8267A2CBBEB61B /* libPods-ViRATESUITests.a */; };
+		5FF22CE91DDD535A00620393 /* GlobalVars.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22CE81DDD535A00620393 /* GlobalVars.m */; };
 		765D64E71D757139008128D3 /* icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 765D64E61D757139008128D3 /* icons.xcassets */; };
 		76A401C41D23A71900294360 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A401C31D23A71900294360 /* main.m */; };
 		76A401C71D23A71900294360 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A401C61D23A71900294360 /* AppDelegate.m */; };
@@ -114,6 +115,8 @@
 		44423F07B41696538304DF43 /* Pods-ViRATES.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViRATES.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViRATES/Pods-ViRATES.debug.xcconfig"; sourceTree = "<group>"; };
 		46C5E35A4D8267A2CBBEB61B /* libPods-ViRATESUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ViRATESUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B4973C7A0DED3CF0F262EC /* libPods-ViRATES.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ViRATES.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FF22CE71DDD535A00620393 /* GlobalVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalVars.h; sourceTree = "<group>"; };
+		5FF22CE81DDD535A00620393 /* GlobalVars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalVars.m; sourceTree = "<group>"; };
 		765D64E61D757139008128D3 /* icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = icons.xcassets; path = ViRATES/icons.xcassets; sourceTree = "<group>"; };
 		76A401BF1D23A71900294360 /* ViRATES.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViRATES.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A401C31D23A71900294360 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -551,6 +554,8 @@
 				8E2F30E21D30FAC600623A9C /* Favorite */,
 				8E1AF3891D30B13F006EA107 /* History */,
 				8E2F30EE1D312D6700623A9C /* Setting */,
+				5FF22CE71DDD535A00620393 /* GlobalVars.h */,
+				5FF22CE81DDD535A00620393 /* GlobalVars.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1154,6 +1159,7 @@
 				8E0962381D57448700D38F55 /* ViRatesServerClient.m in Sources */,
 				8E1AF38D1D30B53D006EA107 /* HistoryViewController.m in Sources */,
 				8E1AF3921D30BD9B006EA107 /* ArticleActionTableViewCell.m in Sources */,
+				5FF22CE91DDD535A00620393 /* GlobalVars.m in Sources */,
 				8E2F30EC1D310BEE00623A9C /* FavoriteActionViewController.m in Sources */,
 				8E2933191D604EDA00887F1B /* Article.m in Sources */,
 				8EE7FE621D6FC9C800957923 /* ArticleCategory.m in Sources */,

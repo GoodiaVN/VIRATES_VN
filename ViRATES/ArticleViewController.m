@@ -15,6 +15,7 @@
 #import "WebViewController.h"
 #import "ArticleFavorite.h"
 #import "ActionViewController.h"
+#import "GlobalVars.h"
 
 #define TOOLBAR_HEIGHT 44
 
@@ -68,7 +69,9 @@
     [self.view addSubview:self.actionViewController.view];
 
     self.automaticallyAdjustsScrollViewInsets = NO;
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    if ([GlobalVars sharedInstance].isShowNaviBar){
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+    }
     self.webView.scrollView.scrollsToTop = YES;
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 
@@ -128,6 +131,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+    
     if(self.isSearchResult){
         [self.navigationController setNavigationBarHidden:YES animated:YES];
     }else{

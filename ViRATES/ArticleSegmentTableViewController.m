@@ -14,6 +14,7 @@
 
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <SVProgressHUD/SVProgressHUD.h>
+#import "GlobalVars.h"
 
 @interface ArticleSegmentTableViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -442,6 +443,7 @@
         if (scrollOffset >= 44)
         {
             [_naviBar setHidden:YES];
+            [GlobalVars sharedInstance].isShowNaviBar = NO;
             
             if (self.articleDelegate && [self.articleDelegate respondsToSelector:@selector(ArticleSegmentScrollUpNavigationBar:)])
             {
@@ -451,6 +453,7 @@
         else
         {
             [_naviBar setHidden:NO];
+            [GlobalVars sharedInstance].isShowNaviBar = YES;
             
             if (self.articleDelegate && [self.articleDelegate respondsToSelector:@selector(ArticleSegmentScrollUpNavigationBar:)])
             {
@@ -465,6 +468,8 @@
         [self updateBarButtonItems:1];
         
         [_naviBar setHidden:NO];
+        [GlobalVars sharedInstance].isShowNaviBar = YES;
+        
         if (self.articleDelegate && [self.articleDelegate respondsToSelector:@selector(ArticleSegmentScrollUpNavigationBar:)])
         {
             [self.articleDelegate ArticleSegmentScrollUpNavigationBar:_naviBar.frame.origin.y - 22];
