@@ -49,6 +49,8 @@
     self.actionTitles = [NSArray arrayWithObjects:@"いいねする",@"シェアする",@"ツィートする",@"Lineに送る",@"Safariで開く",@"URLをコピー", nil];
     self.actionImages = [NSArray arrayWithObjects:@"icon_iine",@"icon_facebook",@"icon_twitter",@"icon_line",@"icon_safari",@"icon_copy", nil];
     self.contentViewConstraintTop.constant = self.rootView.frame.size.height;
+    
+    self.menuScrollView.scrollsToTop = NO;
 }
 
 
