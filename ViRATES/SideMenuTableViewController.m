@@ -50,6 +50,7 @@
     [self.tableView registerNib:nib forCellReuseIdentifier:@"SideMenuTableViewCell"];
 
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    self.tableView.scrollsToTop = NO;
     [self.tableView reloadData];
     self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
 

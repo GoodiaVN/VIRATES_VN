@@ -133,12 +133,15 @@ typedef enum ScrollDirection {
     UIViewController *viewcontroller = [self.scrollVcArray objectAtIndex:page];
     if([viewcontroller isKindOfClass:[ArticleCollectionViewController class]]) {
         ArticleCollectionViewController *colllectionView = (ArticleCollectionViewController *)viewcontroller;
+        [colllectionView enableScrollToTop];
         [colllectionView reloadCollectionView];
     } else if ([viewcontroller isKindOfClass:[ArticleTableViewController class]]) {
         ArticleTableViewController *tableView = (ArticleTableViewController *)viewcontroller;
+        
         [tableView reloadTableView];
     } else if ([viewcontroller isKindOfClass:[ArticleSegmentTableViewController class]]) {
         ArticleSegmentTableViewController *segmentTableView = (ArticleSegmentTableViewController *)viewcontroller;
+        [segmentTableView enableScrollToTop];
         [segmentTableView reloadTableView];
     }
 }
