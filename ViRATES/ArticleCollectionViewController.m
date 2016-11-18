@@ -527,55 +527,55 @@
 }
 
 #pragma mark - SCROLLVIEW DELEGATE
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    CGRect frame = _naviBar.frame;
-    CGFloat scrollOffset = scrollView.contentOffset.y;
-    
-    if(scrollOffset > 0){
-        frame.origin.y = _naviBar.frame.origin.y;
-        frame.size.height = MAX(0, 44 - scrollOffset);
-        
-        CGFloat alpha = (44 - scrollOffset)/44;
-        [self updateBarButtonItems:alpha];
-        
-        if (scrollOffset >= 44)
-        {
-            [_naviBar setHidden:YES];
-            [GlobalVars sharedInstance].isShowNaviBar = NO;
-            
-            if (self.articleDelegate && [self.articleDelegate respondsToSelector:@selector(scrollUpNavigationBar:)])
-            {
-                [self.articleDelegate scrollUpNavigationBar:MAX(_naviBar.frame.origin.y - scrollOffset + 22, _naviBar.frame.origin.y)];
-            }
-        }
-        else
-        {
-            [_naviBar setHidden:NO];
-            [GlobalVars sharedInstance].isShowNaviBar = YES;
-            
-            if (self.articleDelegate && [self.articleDelegate respondsToSelector:@selector(scrollUpNavigationBar:)])
-            {
-                [self.articleDelegate scrollUpNavigationBar:MAX(_naviBar.frame.origin.y - 22 - scrollOffset, _naviBar.frame.origin.y - 66)];
-            }
-        }
-    }
-    else{
-        frame.origin.y = _naviBar.frame.origin.y;
-        frame.size.height = 44;
-        
-        [self updateBarButtonItems:1];
-        
-        [_naviBar setHidden:NO];
-        [GlobalVars sharedInstance].isShowNaviBar = YES;
-        
-        if (self.articleDelegate && [self.articleDelegate respondsToSelector:@selector(scrollUpNavigationBar:)])
-        {
-            [self.articleDelegate scrollUpNavigationBar:_naviBar.frame.origin.y - 22];
-        }
-    }
-    [_naviBar setFrame:frame];
-}
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+//{
+//    CGRect frame = _naviBar.frame;
+//    CGFloat scrollOffset = scrollView.contentOffset.y;
+//    
+//    if(scrollOffset > 0){
+//        frame.origin.y = _naviBar.frame.origin.y;
+//        frame.size.height = MAX(0, 44 - scrollOffset);
+//        
+//        CGFloat alpha = (44 - scrollOffset)/44;
+//        [self updateBarButtonItems:alpha];
+//        
+//        if (scrollOffset >= 44)
+//        {
+//            [_naviBar setHidden:YES];
+//            [GlobalVars sharedInstance].isShowNaviBar = NO;
+//            
+//            if (self.articleDelegate && [self.articleDelegate respondsToSelector:@selector(scrollUpNavigationBar:)])
+//            {
+//                [self.articleDelegate scrollUpNavigationBar:MAX(_naviBar.frame.origin.y - scrollOffset + 22, _naviBar.frame.origin.y)];
+//            }
+//        }
+//        else
+//        {
+//            [_naviBar setHidden:NO];
+//            [GlobalVars sharedInstance].isShowNaviBar = YES;
+//            
+//            if (self.articleDelegate && [self.articleDelegate respondsToSelector:@selector(scrollUpNavigationBar:)])
+//            {
+//                [self.articleDelegate scrollUpNavigationBar:MAX(_naviBar.frame.origin.y - 22 - scrollOffset, _naviBar.frame.origin.y - 66)];
+//            }
+//        }
+//    }
+//    else{
+//        frame.origin.y = _naviBar.frame.origin.y;
+//        frame.size.height = 44;
+//        
+//        [self updateBarButtonItems:1];
+//        
+//        [_naviBar setHidden:NO];
+//        [GlobalVars sharedInstance].isShowNaviBar = YES;
+//        
+//        if (self.articleDelegate && [self.articleDelegate respondsToSelector:@selector(scrollUpNavigationBar:)])
+//        {
+//            [self.articleDelegate scrollUpNavigationBar:_naviBar.frame.origin.y - 22];
+//        }
+//    }
+//    [_naviBar setFrame:frame];
+//}
 
 - (void)updateBarButtonItems:(CGFloat)alpha
 {
